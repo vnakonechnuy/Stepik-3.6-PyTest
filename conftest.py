@@ -13,7 +13,6 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': browser_language})
     browser = webdriver.Chrome(options=options)
-    language = browser.execute_script("return window.navigator.userLanguage || window.navigator.language")
     print('..:: STARTING BROWSER ::..')
 
     yield browser
